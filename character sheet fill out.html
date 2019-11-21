@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="ClassSelector" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        /* --------------------------------------------------------- */
+        /* --------------------------------------------------------- */
+        /* ------------------Side Nav details start------------------*/
+        /* --------------------------------------------------------- */
+        /* --------------------------------------------------------- */
+
+        .leftSidenav {
+            height: 100%; /*size*/
+            width: 20%;
+            position: fixed; /*placement*/
+            z-index: 1;
+            top: 0;
+            left: -20%;
+            overflow-x: hidden; /*format*/
+            transition: 0.5s;
+            padding-top: 60px;
+            background-color: #3B0B39; /*style*/
+        }
+            .leftSidenav .closebtn {
+                position: absolute; /*position*/
+                top: 0;
+                right: 25px;
+                margin-left: 50px; /*format*/
+                font-size: 36px;
+            }
+            .leftSidenav h3 {
+                display: block; /*format*/
+                transition: 0.3s; 
+                padding: 8px 8px 8px 32px; 
+                text-decoration: none; /*style*/
+                font-size: 25px;
+                color: #EFFBEF;
+            }
+            .leftSidenav ul {
+                height: auto; /*size*/
+                width: 100%; 
+                margin: 0; /*placement*/
+                overflow: auto; /*format*/
+                list-style-type: none; /*style*/
+                background-color: #A901DB; 
+            }
+            .leftSidenav li {
+                border-bottom: 1px solid #555;
+                font-size: 30px;
+            }
+                .leftSidenav li:last-child {
+                    border-bottom: none;
+                }
+                .leftSidenav li a {
+                    display: block;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                    color: #000;
+                }
+                    .leftSidenav li a.active {
+                        background-color: #4CAF50;
+                        color: white;
+                    }
+                    .leftSidenav li a:hover:not(.active) {
+                        background-color: #555;
+                        color: white;
+                    }
+        .main {
+            height: 100%;
+            width: 60%; /*size*/
+            margin-left: 20%; /*placement*/
+            text-align: left; /*format*/
+            padding: 18px; 
+            border: 1px solid #555; /*style*/
+            outline: none; 
+            font-size: 15px; 
+            background-color: #A901DB; 
+            color: white; 
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!------------------------------------------------------------->
+    <!------------------------------------------------------------->
+    <!----------------------Left Side Nav-------------------------->
+    <!------------------------------------------------------------->
+    <!------------------------------------------------------------->
+
+
+    <span style="font-size:30px;cursor:pointer" onclick="openLeftNav()">
+
+        <img src="Images/MenuIcon.jpg" alt="Menu Icon" width="50" height="50" style=padding-left:10px;>
+
+    </span>
+
+
+
+    <div id="leftSidenav" class="leftSidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&#8592; alsdkfj</a>
+
+        <h3> DnD Character Creator </h3>
+
+        <ul>
+
+            <li><a href="#race" onclick="closeLeftNav()">Race</a></li>
+
+            <li><a class="active" href="#class_title" onclick="closeLeftNav()">Class</a></li>
+
+            <li><a href="#background" onclick="closeLeftNav()">Background</a></li>
+
+            <li><a href="#spells" onclick="closeLeftNav()">Spells</a></li>
+
+            <li><a href="Equipment.html" onclick="closeLeftNav()">Equipment</a></li>
+
+            <li><a href="Ability_Scores.html" onclick="closeLeftNav()">Ability Scores</a></li>
+
+            <li><a href="#skills" onclick="closeLeftNav()">Skills</a></li>
+
+        </ul>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <a href="Character Sheet - Alternative - Print Version.pdf" download>
+
+            <button class="subclass">Download a blank character sheet here!</button>
+
+        </a>
+    </div>
+
+    <div class="main">
+
+        <p>this is the main section</p>
+    </div>
+
+
+    <script>
+        
+        function openLeftNav() {
+            document.getElementById("leftSidenav").style.left = "0";
+        }
+
+        function closeLeftNav() {
+            document.getElementById("leftSidenav").style.left = "-20%";
+        }
+
+        function openRightNav() {
+            document.getElementById("rightSidenav").style.width = "35%";
+        }
+
+        function closeRightNav() {
+            document.getElementById("rightSidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>
